@@ -112,10 +112,6 @@ public class TestHandle {
         int rdi = (int) (Math.random() * datastmp.size()); 
         String the_question = (String) datastmp.get(rdi).get(0);
 
-        System.out.println("-----------------------------");
-        System.out.println("taille datastmp : " + datastmp.size());
-        System.out.println("generate index : " + rdi);
-        System.out.println("-----------------------------");
 
         session.setAttribute("current_qpoint" , (Integer) datastmp.get(rdi).get(1));
 
