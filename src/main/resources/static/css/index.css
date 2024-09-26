@@ -1,0 +1,416 @@
+
+@import url('https://fonts.cdnfonts.com/css/manga-temple');
+
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: auto;
+}
+
+
+
+.mainbackpic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/back2.png'); /* Chemin relatif vers l'image */
+    background-size: cover;
+    background-position: center;
+    z-index: -100;
+    filter: brightness(20%);
+}
+
+
+
+
+.koko {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    width: 50%;
+    height: fit-content;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.koko p {
+    text-shadow: 2px 5px 10px #CE5937;
+    color:aliceblue;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Manga Temple', sans-serif;
+    text-align: center;
+}
+
+
+
+.betatxt {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: 1.8em auto;
+    right: 0;
+    left: 0;
+    color: aliceblue;
+    text-shadow: 2px 5px 10px #CE5937;
+    text-transform: uppercase;
+    font-family: 'Manga Temple', sans-serif;
+    font-size: 0.8em;
+}
+
+
+
+
+
+.koko hr {
+    width: 0;         
+    height: 0.05em;           
+    background-color: rgba(239, 160, 151, 0.751);
+    border: none;    
+    transition: width 0.5s ease; 
+}
+
+
+
+#kokobtn {
+    font-size: 0.9em;
+    opacity: 0;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    margin-top:2em;
+    padding: 1.5em 1em;
+    width: 40%;
+    border-radius: 0.7em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    border: 0.2em double rgba(255, 255, 255, 0.684);
+    transition: 0.2s;
+    font-weight: 600;
+    font-style: italic;
+    border-bottom: 0.45em solid rgba(240, 248, 255, 0.623);
+    background-color: rgb(46, 19, 15);
+    color:rgba(240, 248, 255, 0.681);
+}
+
+
+
+#kokobtn:hover {
+    background-color: rgba(198, 198, 217, 0.863);
+    color: black;
+}
+
+
+
+
+
+.copyright {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(240, 248, 255, 0.694);
+    text-shadow: rgb(20, 97, 184) 1px 0 10px;
+    margin: auto;
+    margin-bottom: 1em;
+    font-size: 0.7em;
+}
+
+
+.qdatadivclass {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 30%;
+    margin: auto;
+    margin-top:0.5em;
+    width: 50%;
+    height: 50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qdataclass {
+    opacity: 0;
+    text-shadow: 2px 5px 5px #ce5a379f;
+    color:aliceblue;
+    font-size: 1.3em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Manga Temple', sans-serif;
+    animation: qdataA .3s forwards;
+}
+
+
+@keyframes qdataA {
+    0% {
+        transform: translateY(-0.5em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+
+.dataresbtnclass {
+    width: 20%;
+    height: 4em;
+    text-decoration: none;
+    border: none;
+    padding: 1em;
+    margin-top: 2em;
+    font-weight: 600;
+    font-family: 'Manga Temple', sans-serif;
+    border: 0.2em double rgb(68, 84, 97);
+    border-radius: 1em;
+    transition: all 0.15s ease-in-out;
+    animation: displaydatabtnA 0.2s forwards;
+    opacity: 0;
+}
+
+
+@keyframes displaydatabtnA {
+    0% {
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+
+.dataresbtnclass1 {
+    background-color: rgba(194, 255, 101, 0.984);
+}
+
+
+.dataresbtnclass2 {
+    background-color: rgba(252, 86, 53, 0.9);
+}
+
+
+.dataresbtnclass:hover {
+    filter: brightness(50%);
+}
+
+
+.resultclass {
+    color: aliceblue;
+    font-family: 'Manga Temple', sans-serif;
+    text-shadow: 2px 5px 10px #CE5937;
+    font-size: 2.5em;
+}
+
+
+
+.pointdivclass {
+    position: absolute;
+    margin: auto;
+    max-width: 60%;
+    height: fit-content;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color:#ce5a371a;
+    border-radius: 1em;
+    padding: 1.5em;
+    animation: pointdivA 0.3s forwards;
+    opacity: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.endbtnclass {
+    text-decoration: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: aliceblue;
+    color: black;
+    margin: 1em auto;
+}
+
+
+
+
+@keyframes pointdivA {
+    0% {
+        transform: scale(1.3);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.endtxtclass {
+    color: aliceblue;
+    font-family: 'Manga Temple', sans-serif;
+    text-shadow: 2px 5px 10px #ce5a37b1;
+    font-size: 1em;
+    font-style: italic;
+}
+
+
+
+
+.restartclass {
+    background-color: rgba(255, 255, 255, 0.847);
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 1em auto;
+    filter: brightness(80%);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+
+
+.restartclass:hover {
+    filter: brightness(30%);
+    transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+.instaclass {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 1em;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.instaclass:hover {
+    opacity: 1;
+}
+
+
+.tototo {
+    animation: handAA 1s infinite linear;
+}
+
+
+
+@keyframes handAA {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(1em);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 432px) {
+
+    .qdatadivclass {
+        width: 80%;
+    }
+    
+
+
+    .qdataclass {
+        font-size: 1em;
+    }
+
+
+        
+    .dataresbtnclass {
+        width: 50%;
+    }
+        
+
+
+    
+
+    .koko {
+        width: 80%;
+    }
+
+
+    .koko p {
+        font-size: 1.2em;
+    }
+
+
+
+    
+    #kokobtn {
+        font-size: 0.9em;
+        opacity: 0;
+        cursor: pointer;
+        border: none;
+        text-decoration: none;
+        margin-top:2em;
+        padding: 1.5em 1em;
+        width: 80%;
+        border-radius: 0.7em;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 1px;
+        border: 0.2em double rgba(255, 255, 255, 0.684);
+        transition: 0.2s;
+        font-weight: 600;
+        font-style: italic;
+        border-bottom: 0.45em solid rgba(240, 248, 255, 0.623);
+        background-color: rgb(46, 19, 15);
+        color:rgba(240, 248, 255, 0.681);
+    }
+
+
+ 
+    
+    
+}
+  
