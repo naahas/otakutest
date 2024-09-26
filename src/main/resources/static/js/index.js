@@ -86,8 +86,15 @@ anime({
     complete: function() {
 
         anime({
-            targets: '#kokobtn',
-            opacity: [0, 1], // Le bouton passe de caché à visible
+            targets: ['#kokobtn'],
+            opacity: [0, 1], 
+            duration: 800,
+            easing: 'easeOutQuad',
+        });  
+
+        anime({
+            targets: ["#subtxt"],
+            opacity: [0, 0.9], 
             duration: 800,
             easing: 'easeOutQuad',
         });  
@@ -174,18 +181,37 @@ function submitTestAnswer(ans) {
 
 
 function endTest(point) {
+
+    var main = document.getElementById('app');
     
     var pointdiv = document.createElement('div');
     pointdiv.classList.add('pointdivclass');
 
+    var spanp = document.createElement('p');
+    spanp.innerHTML = "LVL : " + point;
+    spanp.classList.add('resultclass');
+
     var endtxt = document.createElement('p');
-    endtxt.textContent = "Tu es un Otaku confirmé ! Tu sembles avoir été bercé dans cet univers depuis bien longtemps !"
+
+    if (point === 0) {
+        endtxt.innerHTML = "Tu viens d'atterrir , tu as beaucoup de choses à découvrir alors qu'est-ce que tu attends ?";
+    } else if (point > 0 && point <= 500) {
+        endtxt.innerHTML = "Tu as déjà fait un premier pas, et il y a tant d'horizons à explorer ! Continue sur cette voie.";
+    } else if (point > 500 && point <= 1500) {
+        endtxt.innerHTML = "Tu as acquis des bases solides et commencer à dévelopepr certaines habitudes. Avec un peu plus d'exploration, tu deviendras un véritable expert !";
+    } else if (point > 1500 && point <= 3000) {
+        endtxt.innerHTML = "Impressionant ! Tu as atteint un niveau remarquable. Ton amour et ta passion peut se ressentir à travers ta personne !"
+    } else if (point > 3000 && point <= 4000) {
+        endtxt.innerHTML = "Véritable Otaku et Maître dans le domaine , ta passion pour cet univers est contagieuse !";
+    } else if (point > 4000 && point <= 5500) {
+        endtxt.innerHTML = "Légende et reconnu parmis tes proches comme étant un Otaku , ta passion n'a plus de limite !";
+    } else {
+        endtxt.innerHTML = "Wow, tu as dépassé toutes les attentes !";
+    }
+
+    
     endtxt.classList.add('endtxtclass');
 
-    var main = document.getElementById('app');
-    var spanp = document.createElement('p');
-    spanp.innerHTML = "Otaku Points : " + point;
-    spanp.classList.add('resultclass');
 
     
     var endbtn = document.createElement('button');
@@ -193,8 +219,10 @@ function endTest(point) {
     endbtn.innerHTML = "REJOUER";
 
 
+
+
     var restartimg = document.createElement('img');
-    restartimg.src = '/img/restart2.png';
+    restartimg.src = '/img/restart3.png';
     restartimg.classList.add('restartclass');
 
     restartimg.addEventListener('click' , () => {
@@ -203,8 +231,8 @@ function endTest(point) {
 
 
 
-    pointdiv.append(spanp , endtxt , restartimg);
-    main.append(pointdiv);
+    pointdiv.append(spanp , endtxt);
+    main.append(pointdiv , restartimg);
 
 
 }
@@ -212,6 +240,8 @@ function endTest(point) {
 
 
 
-function openInsta() {
-    window.open('https://www.instagram.com/naahas__', '_blank');
+function openSocial(stat) {
+    if(stat == 1) window.open('https://www.instagram.com/naahas__', '_blank');
+    else if(stat == 2) window.open('https://www.tiktok.com/@naahas__', '_blank');
+         else window.open('https://www.instagram.com/naahas__', '_blank');
   }

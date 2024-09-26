@@ -101,14 +101,14 @@ public class TestHandle {
         List<List<Object>> datastmp = (List<List<Object>>) session.getAttribute("datastmp");
         List<Object> response = new ArrayList<>();
 
-        if (datastmp == null || datastmp.isEmpty()) {
+        if (datastmp == null || datastmp.isEmpty() || datastmp.size() <= 33) {
             response.add("off");
             response.add(session.getAttribute("playerPoints"));
             return response;
         }
 
 
-        
+
 
         int rdi = (int) (Math.random() * datastmp.size()); 
         String the_question = (String) datastmp.get(rdi).get(0);

@@ -26,6 +26,9 @@
             <p> A quel point es-tu un Otaku ? </p>
 
             <button id="kokobtn" @click="launchTest()"> PASSER LE TEST &nbsp; <i class="fa-solid fa-hand-point-right tototo"></i> </button>
+
+
+            <p id="subtxt"> [50 questions choisies aléatoirement parmis plus de 300] <p>
          </div>
 
          
@@ -36,7 +39,11 @@
     </div>
 
 
-    <img onclick = "openInsta()" class="instaclass" th:src="@{/img/instagram.png}">
+    <div class="socialdiv">
+        <img onclick = "openSocial(1)" class="socialclass instaclass" th:src="@{/img/instagram.png}">
+        <img onclick = "openSocial(2)" class="socialclass tiktokclass" th:src="@{/img/tiktok.png}">
+    </div>
+ 
 
 
     <span class="copyright"> Otakutest © Nahass 2024 </span>

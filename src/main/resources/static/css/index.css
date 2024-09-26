@@ -71,16 +71,6 @@ body {
 
 
 
-.koko hr {
-    width: 0;         
-    height: 0.05em;           
-    background-color: rgba(239, 160, 151, 0.751);
-    border: none;    
-    transition: width 0.5s ease; 
-}
-
-
-
 #kokobtn {
     font-size: 0.9em;
     opacity: 0;
@@ -88,7 +78,7 @@ body {
     border: none;
     text-decoration: none;
     margin-top:2em;
-    padding: 1.5em 1em;
+    padding: 1.5em 0.7em;
     width: 40%;
     border-radius: 0.7em;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -219,7 +209,7 @@ body {
     color: aliceblue;
     font-family: 'Manga Temple', sans-serif;
     text-shadow: 2px 5px 10px #CE5937;
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 
 
@@ -284,11 +274,16 @@ body {
 
 
 .restartclass {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.847);
     border-radius: 50%;
-    width: 2.5em;
-    height: 2.5em;
-    margin: 1em auto;
+    width: 2em;
+    height: 2em;
     filter: brightness(80%);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -299,26 +294,33 @@ body {
 
 .restartclass:hover {
     filter: brightness(30%);
-    transform: rotate(360deg);
+    transform: translateY(0.3em);
 }
 
 
 
-
-
-
-
-.instaclass {
+.socialdiv {
     position: absolute;
+    width: fit-content;
+    height: fit-content ;
     right: 0;
     bottom: 0;
-    margin: 1em;
-    opacity: 0.6;
+    margin: 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.socialclass {
+    padding: 0.5em;
+    opacity: 0.8;
     cursor: pointer;
 }
 
 
-.instaclass:hover {
+.socialclass:hover {
     opacity: 1;
 }
 
@@ -346,7 +348,20 @@ body {
 
 
 
-
+#subtxt{
+    opacity: 0;
+    text-shadow: 4px 8px 13px #CE5937;
+    color:aliceblue;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-family: 'Manga Temple', sans-serif;
+    letter-spacing: 0.1em;
+    /* font-family: 'Times New Roman', Times, serif; */
+    text-align: center;
+    margin-top: 3.5em;
+    transition: 0.2s;
+    font-style: italic;
+}
 
 
 
@@ -354,6 +369,34 @@ body {
 
 
 @media screen and (max-width: 432px) {
+
+
+    .socialclass {
+        width: 3em;
+    }
+
+
+        
+    .pointdivclass {
+        max-width: 80%;
+    }
+
+
+
+    .resultclass {
+        font-size: 1.2em
+    }
+
+
+
+
+        
+    .endtxtclass {
+        font-size: 0.7em;
+    }
+
+
+
 
     .qdatadivclass {
         width: 80%;
@@ -388,29 +431,65 @@ body {
 
     
     #kokobtn {
-        font-size: 0.9em;
-        opacity: 0;
-        cursor: pointer;
-        border: none;
-        text-decoration: none;
-        margin-top:2em;
-        padding: 1.5em 1em;
-        width: 80%;
-        border-radius: 0.7em;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        letter-spacing: 1px;
-        border: 0.2em double rgba(255, 255, 255, 0.684);
-        transition: 0.2s;
-        font-weight: 600;
-        font-style: italic;
-        border-bottom: 0.45em solid rgba(240, 248, 255, 0.623);
-        background-color: rgb(46, 19, 15);
-        color:rgba(240, 248, 255, 0.681);
+        font-size: 0.8em;
+        width: 85%;
     }
 
+
+
+    .restartclass {
+        bottom: 40%;
+    }
 
  
     
     
 }
+
+
+
+
+@media screen and (orientation:landscape) and (max-width:950px)  { 
+
+
+        .restartclass {
+            width: 1em;
+            height: 1em;
+            bottom: 10%;
+        }
+
+
+        #kokobtn {
+            width: 80%;
+        }
+
+
+        .koko p {
+            font-size: 1.4em;
+        }
+
+
+        .dataresbtnclass {
+            width: 40%;
+            height: 3.2em;
+            margin-top: 1em;
+            padding: 0.5em;
+        }
+
+
+        .qdatadivclass {
+            
+        }
+
+
+        .qdataclass {
+            font-size: 0.7em;
+        }
+        
+            
+    
+}
   
+
+
+

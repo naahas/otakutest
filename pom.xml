@@ -89,7 +89,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 
 				<configuration>
-					<mainClass>com.example.demo.DemoApplication</mainClass> <!-- Remplace par le chemin de ta classe principale -->
+					<mainClass>com.example.demo.DemoApplication</mainClass> 
 				</configuration>
 			</plugin>
 		</plugins>
