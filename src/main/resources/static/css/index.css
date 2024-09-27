@@ -309,9 +309,7 @@ body {
     position: absolute;
     margin: auto;
     left: 0;
-    right: 0;
-    bottom: 20%;
-    margin: auto;
+    margin: 1em;
     background-color: rgba(255, 255, 255, 0.847);
     border-radius: 50%;
     width: 2em;
@@ -425,7 +423,6 @@ body {
 
 @media screen and (max-width: 432px) {
 
-
     .extraimg {
         display: none;
     }
@@ -512,11 +509,7 @@ body {
 
 
 
-    .restartclass {
-        bottom: 40%;
-    }
 
- 
     
     
 }
@@ -527,10 +520,13 @@ body {
 @media screen and (orientation:landscape) and (max-width:950px)  { 
 
 
+        .extraimg {
+            display: none;
+        }
+
         .restartclass {
             width: 1em;
             height: 1em;
-            bottom: 10%;
         }
 
 
