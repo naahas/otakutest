@@ -54,18 +54,48 @@ body {
 
 
 
-.betatxt {
+.betaprogressdiv {
     position: absolute;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     margin: 1.8em auto;
     right: 0;
     left: 0;
+    display: flex;
+    justify-content :center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.betatxt {
     color: aliceblue;
     text-shadow: 2px 5px 10px #CE5937;
     text-transform: uppercase;
     font-family: 'Manga Temple', sans-serif;
     font-size: 0.8em;
+}
+
+
+
+
+#progresscontainer {
+    display: none;
+    width: 60%;
+    background-color: #b18f8fc6;
+    border-radius: 5em;
+    height: 0.7em;
+    border: 0.2em double rgb(57, 6, 39);
+}
+
+
+#progressbar {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(255, 242, 239);
+    border-radius: 5em;
+    transition: width 0.3s ease-in-out;
+    /* background-image: url('https://i.pinimg.com/originals/62/39/4d/62394d753859943e6a1a36443ef78795.gif'); */
 }
 
 
@@ -391,7 +421,23 @@ body {
 
 
 
+
 @media screen and (max-width: 432px) {
+
+
+    .totaltxt {
+        width: 100%;
+        text-shadow: 2px 5px 10px #CE5937;
+        color:aliceblue;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        font-family: 'Manga Temple', sans-serif;
+        text-align: center;
+        margin-top: 1em;
+        letter-spacing: 0.1em;
+        word-spacing: 0.1em;
+    }
+    
 
 
     .socialclass {

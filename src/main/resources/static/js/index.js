@@ -17,6 +17,8 @@ var app = new Vue({
 
 
         launchTest: function() {
+            $('#progresscontainer').fadeIn(500);
+            
             $('#app').empty();
 
             var config = {
@@ -131,13 +133,15 @@ function displayTest(question) {
 
 
     yesbtn.addEventListener('click' , () => {
-        document.getElementById('qdatadivid').remove()
+        document.getElementById('qdatadivid').remove();
+        increaseBar();
         submitTestAnswer("yes");
     });
 
 
     nobtn.addEventListener('click' , () => {
-        document.getElementById('qdatadivid').remove()
+        document.getElementById('qdatadivid').remove();
+        increaseBar();
         submitTestAnswer("non");
     });
 
@@ -198,7 +202,7 @@ function endTest(point) {
     } else if (point > 0 && point <= 500) {
         endtxt.innerHTML = "Tu as déjà fait un premier pas, et il y a tant d'horizons à explorer ! Continue sur cette voie.";
     } else if (point > 500 && point <= 1500) {
-        endtxt.innerHTML = "Tu as acquis des bases solides et commencer à dévelopepr certaines habitudes. Avec un peu plus d'exploration, tu deviendras un véritable expert !";
+        endtxt.innerHTML = "Tu as acquis des bases solides et commencer à développer certaines habitudes. Avec un peu plus d'exploration, tu deviendras un véritable expert !";
     } else if (point > 1500 && point <= 3000) {
         endtxt.innerHTML = "Impressionant ! Tu as atteint un niveau remarquable. Ton amour et ta passion peut se ressentir à travers ta personne !"
     } else if (point > 3000 && point <= 4000) {
@@ -238,10 +242,29 @@ function endTest(point) {
 }
 
 
-
-
 function openSocial(stat) {
     if(stat == 1) window.open('https://www.instagram.com/naahas__', '_blank');
     else if(stat == 2) window.open('https://www.tiktok.com/@naahas__', '_blank');
          else window.open('https://www.instagram.com/naahas__', '_blank');
   }
+
+
+
+
+var cquestion = 0;
+function increaseBar() {
+    cquestion++;  
+
+    const progressPercentage = (cquestion / 50) * 100;
+    document.getElementById("progressbar").style.width = progressPercentage + "%";
+
+    if(cquestion >= 50) {
+        $('#progresscontainer').fadeOut(500);
+        cquestion = 0;
+
+        setTimeout(() => {
+            document.getElementById("progressbar").style.width = "0%";
+        }, 1000);
+    }
+   
+}
