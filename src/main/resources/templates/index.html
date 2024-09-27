@@ -23,16 +23,24 @@
     <div id = "app">
 
         <div id="kokoid" class="koko"> 
-            <p> A quel point es-tu un Otaku ? </p>
+            <p class="othertxt"> A quel point es-tu un Otaku ? </p>
 
             <button id="kokobtn" @click="launchTest()"> PASSER LE TEST &nbsp; <i class="fa-solid fa-hand-point-right tototo"></i> </button>
 
+            <!--  <p class="othertxt" id="subtxt"> [ 50 questions choisies aléatoirement parmis plus de 300 ] <p> -->
 
-            <p id="subtxt"> [50 questions choisies aléatoirement parmis plus de 300] <p>
-         </div>
+            <hr>
+
+            <p class="totaltxt"> 
+                <img width = "25" height = "25" th:src = "@{/img/doraemon.png}"> &nbsp; 
+                Total des tests effectués ➩
+                <span th:text='${totalplayer}'> </span> &nbsp;
+                 <img width = "25" height = "25" th:src = "@{/img/doraemon.png}"> 
+            </p>
+
+        </div>
 
          
-
 
 
     

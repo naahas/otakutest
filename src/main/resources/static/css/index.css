@@ -42,7 +42,8 @@ body {
 }
 
 
-.koko p {
+
+.othertxt {
     text-shadow: 2px 5px 10px #CE5937;
     color:aliceblue;
     font-size: 2em;
@@ -365,6 +366,28 @@ body {
 
 
 
+.totaltxt {
+    text-shadow: 2px 5px 10px #CE5937;
+    color:aliceblue;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Manga Temple', sans-serif;
+    text-align: center;
+    margin-top: 1em;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+}
+
+
+.koko hr {
+    margin-top: 3.5em;
+    height: 0.1em;
+    background-color: rgb(237, 163, 163);
+    width: 60%;
+    border: none; 
+    box-shadow: rgb(121, 164, 210) 0px 20px 30px -10px;
+}
+
 
 
 
@@ -423,7 +446,7 @@ body {
     }
 
 
-    .koko p {
+    .othertxt {
         font-size: 1.2em;
     }
 
@@ -464,7 +487,7 @@ body {
         }
 
 
-        .koko p {
+        .othertxt {
             font-size: 1.4em;
         }
 

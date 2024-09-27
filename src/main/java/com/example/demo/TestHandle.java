@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.clickhouse.ClickHouseService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,14 +13,17 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+
+
 
 @RestController
 public class TestHandle {
+
+
+    @Autowired
+    private ClickHouseService clickHouseService;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -35,7 +39,7 @@ public class TestHandle {
 
 
 
-    @PostMapping("/")
+    @PostMapping("/launchTEST")
     public String getTestAlert(@RequestBody Map<String, String> payload, HttpSession session) {
         session.setAttribute("playerPoints" , 0);
 
@@ -101,13 +105,18 @@ public class TestHandle {
         List<List<Object>> datastmp = (List<List<Object>>) session.getAttribute("datastmp");
         List<Object> response = new ArrayList<>();
 
+
+
+
         if (datastmp == null || datastmp.isEmpty() || datastmp.size() <= 33) {
             response.add("off");
             response.add(session.getAttribute("playerPoints"));
+            clickHouseService.incrementTotalPlayers();
             return response;
         }
 
 
+      
 
 
         int rdi = (int) (Math.random() * datastmp.size()); 

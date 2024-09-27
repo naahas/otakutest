@@ -21,7 +21,7 @@ var app = new Vue({
 
             var config = {
                 method: 'post',
-                url: '/',
+                url: '/launchTEST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
