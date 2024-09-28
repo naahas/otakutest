@@ -108,7 +108,7 @@ public class TestHandle {
 
 
 
-        if (datastmp == null || datastmp.isEmpty() || datastmp.size() <= 33) {
+        if (datastmp == null || datastmp.isEmpty() || datastmp.size() <= 35) {
             response.add("off");
             response.add(session.getAttribute("playerPoints"));
             clickHouseService.incrementTotalPlayers();
